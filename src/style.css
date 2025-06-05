@@ -36,13 +36,68 @@ h1 {
   text-transform: uppercase;
 }
 
-h1.centered-text {
+.main-header {
   text-align: center;
-  margin-top: 3vh;
+  margin-top: 0;
 }
 
 .main-container {
   width: 100%;
-  height: 300vh;
+  height: 500vh;
   background-color: rgb(58, 58, 58);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Center the pill SVG absolutely in the main container */
+.pill-mask-container {
+  position: fixed;
+  top: 50vh;
+  left: 50%;
+  /* transform: translate(-50%, -50%) scale(1); */
+  z-index: 2;
+  pointer-events: none;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fixed-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pill-svg {
+  display: block;
+  width: 300px;
+  height: 100px;
+}
+
+/* Mask the content with the pill shape */
+.masked-content {
+  position: fixed;
+  top: 50vh;
+  left: 50%;
+  width: 300px;
+  height: 101px;
+  /* transform: translate(-50%, -50%) scale(1); */
+  z-index: 3;
+  clip-path: url(#pill-mask);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure h1 fits inside the pill */
+.masked-content h1 {
+  font-size: 2em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 80px;
 }
