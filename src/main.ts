@@ -5,8 +5,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const maskedContent = document.querySelector('.masked-content') as HTMLElement;
 const fixedContent = document.querySelector('.fixed-content') as HTMLElement;
+const mainContainer = document.querySelector('.main-container') as HTMLElement;
 
 let currentScale = 1;
+
+// Set initial transform for fixedContent
+fixedContent.style.transform = `scale(${1 / currentScale})`;
 
 function getResponsiveScale() {
   // The original pill width/height
@@ -47,13 +51,9 @@ gsap.to(maskedContent, {
   }
 });
 
-// Set initial transform for fixedContent
-fixedContent.style.transform = "scale(1)";
-
 // Animate opacity for each image using individual ScrollTriggers based on scroll height
 const images = document.querySelectorAll<HTMLLIElement>('.health-images li');
 const numImages = images.length;
-const mainContainer = document.querySelector('.main-container') as HTMLElement;
 
 if (numImages > 1 && mainContainer) {
   const totalScroll = mainContainer.scrollHeight; // main-container height in vh
