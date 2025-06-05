@@ -79,9 +79,10 @@ ul.fixed-images li:nth-child(3) {
 
 ul.fixed-images img {
   object-fit: cover;
+  object-position: top center;
   display: block;
-  width: 100vw;
-  height: 125vh;
+  width: auto;
+  height: 140vh;
 }
 
 .main-container {
@@ -93,6 +94,37 @@ ul.fixed-images img {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+.fixed-heading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 10;
+  width: 100%;
+  max-width: 850px;
+  text-align: center;
+  margin: 0;
+  height: 1rem;
+
+  span {
+    margin: 0;
+    line-height: 1;
+    color: #646cff;
+    display: block;
+    font-size: 1.2em;
+    position: absolute;
+    top: -50%;
+  }
+
+  .left-side {
+    left: 0;
+  }
+
+  .right-side {
+    right: 0;
+  }
 }
 
 .pill-mask-container {
@@ -116,6 +148,10 @@ ul.fixed-images img {
   display: block;
   width: 300px;
   height: auto;
+  position: fixed;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .masked-content {
@@ -136,15 +172,11 @@ ul.fixed-images img {
 
 .fixed-text {
   position: absolute;
-  /* opacity: 0; */
   top: 50%;
   left: 50%;
   z-index: 10;
+  opacity: 0;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
@@ -163,11 +195,13 @@ ul.fixed-images img {
   font-size: 1.3em;
   line-height: 1.4;
   font-weight: 400;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 0.5em 0;
 }
 
 .fixed-text .cta {
   font-size: 1.1em;
+  text-transform: uppercase;
+  font-family: "Oswald";
   padding: 0.8em 2.2em;
   border: none;
   border-radius: 30px;
