@@ -52,12 +52,10 @@ h1 {
   justify-content: flex-start;
 }
 
-/* Center the pill SVG absolutely in the main container */
 .pill-mask-container {
   position: fixed;
   top: 50vh;
   left: 50%;
-  /* transform: translate(-50%, -50%) scale(1); */
   z-index: 2;
   pointer-events: none;
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,6 +67,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: scale(1);
+  will-change: transform;
 }
 
 .pill-svg {
@@ -77,14 +77,14 @@ h1 {
   height: 100px;
 }
 
-/* Mask the content with the pill shape */
 .masked-content {
   position: fixed;
   top: 50vh;
   left: 50%;
   width: 300px;
   height: 101px;
-  /* transform: translate(-50%, -50%) scale(1); */
+  transform: translate(-50%, -50%) scale(1);
+  will-change: transform;
   z-index: 3;
   clip-path: url(#pill-mask);
   display: flex;
@@ -93,7 +93,6 @@ h1 {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Ensure h1 fits inside the pill */
 .masked-content h1 {
   font-size: 2em;
   margin: 0;

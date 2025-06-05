@@ -9,26 +9,35 @@
   </head>
   <body>
     <div class="main-container">
-      <!-- Pill SVG as mask and visual element -->
       <div class="pill-mask-container">
         <svg
           class="pill-svg"
           width="300"
-          height="80"
-          viewBox="0 0 300 80"
+          height="100"
+          viewBox="0 0 300 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <clipPath id="pill-mask">
-            <rect x="0" y="0" width="300" height="100" rx="50" fill="none" />
-          </clipPath>
+          <defs>
+            <clipPath id="pill-mask">
+              <rect x="0" y="0" width="300" height="100" rx="50" fill="none" />
+            </clipPath>
+          </defs>
+          <rect
+            x="0"
+            y="0"
+            width="300"
+            height="100"
+            rx="50"
+            fill="#333"
+            opacity="0.2"
+          />
         </svg>
       </div>
       <div class="masked-content">
         <div class="fixed-content">
           <h1 class="main-header">Hello world</h1>
         </div>
-        <!-- ...everything else you want masked goes here... -->
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
