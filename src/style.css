@@ -136,7 +136,7 @@ ul.fixed-images img {
 
 .fixed-text {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   top: 50%;
   left: 50%;
   z-index: 10;
@@ -147,6 +147,7 @@ ul.fixed-images img {
   justify-content: start;
   width: 90%;
   max-width: 600px;
+  margin: 0 auto;
   pointer-events: none;
   color: rgb(248, 248, 248);
 }
@@ -155,8 +156,6 @@ ul.fixed-images img {
   font-size: 2.5em;
   line-height: 1;
   margin: 0 0 0.5em 0;
-  transform: translateY(30px);
-  transition: opacity 0.4s, transform 0.4s;
 }
 
 .fixed-text h2 {
@@ -165,8 +164,6 @@ ul.fixed-images img {
   line-height: 1.4;
   font-weight: 400;
   margin: 0 0 1.5em 0;
-  transform: translateY(30px);
-  transition: opacity 0.4s, transform 0.4s;
 }
 
 .fixed-text .cta {
@@ -178,7 +175,5 @@ ul.fixed-images img {
   font-weight: 600;
   cursor: pointer;
   margin-top: 1em;
-  transform: translateY(30px);
-  transition: opacity 0.4s, transform 0.4s;
   pointer-events: auto;
 }
