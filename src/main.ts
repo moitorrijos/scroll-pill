@@ -188,3 +188,15 @@ if (leftSide && rightSide && maskedContent) {
   });
 }
 
+// --- Imported Animations --- //
+import { pillScaleAnimation } from './pillScaleAnimation';
+import { imagesOpacityAnimation } from './imagesOpacityAnimation';
+import { fixedTextAnimation } from './fixedTextAnimation';
+import { fixedHeadingAnimation } from './fixedHeadingAnimation';
+
+// Run each animation
+pillScaleAnimation();
+imagesOpacityAnimation();
+fixedTextAnimation();
+fixedHeadingAnimation();
+
