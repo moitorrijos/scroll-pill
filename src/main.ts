@@ -17,8 +17,8 @@ function getResponsiveScale() {
   const pillWidth = 536;
   const pillHeight = 240;
   // Get viewport dimensions
-  const vw = window.innerWidth * 1.35;
-  const vh = window.innerHeight * 1.35;
+  const vw = window.innerWidth * 1.4;
+  const vh = window.innerHeight * 1.4;
   // Calculate max scale that fits in viewport
   const scaleX = vw / pillWidth;
   const scaleY = vh / pillHeight;
