@@ -17,7 +17,7 @@ gsap.to(maskedContent, {
     start: "top top",
     end: "bottom bottom",
     scrub: true,
-    onUpdate: self => {
+    onUpdate: () => {
       // Get the current scale value from the tween
       currentScale = gsap.getProperty(maskedContent, "scale") as number;
       // Inversely scale the fixedContent to keep it visually the same size
