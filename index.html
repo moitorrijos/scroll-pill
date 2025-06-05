@@ -3,13 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scrolling Pill Animation</title>
-    <script type="module" crossorigin src="/scroll-pill/assets/index-WdS6Cbg6.js"></script>
-    <link rel="stylesheet" crossorigin href="/scroll-pill/assets/index-bwmYUyEB.css">
+    <script type="module" crossorigin src="/scroll-pill/assets/index-C03vfnm9.js"></script>
+    <link rel="stylesheet" crossorigin href="/scroll-pill/assets/index-Ce9BrGNH.css">
   </head>
   <body>
     <div class="main-container">
+      <h1 class="fixed-heading">
+        <span class="left-side">Hello</span>
+        <span class="right-side">World</span>
+      </h1>
       <div class="pill-mask-container">
         <svg
           class="pill-svg"
@@ -32,7 +42,19 @@
       </div>
       <div class="masked-content">
         <div class="fixed-content">
-          <h1 class="main-header">Hello world</h1>
+          <ul class="fixed-images">
+            <li><img src="/scroll-pill/health-1.jpg" alt="Health 1" /></li>
+            <li><img src="/scroll-pill/health-2.jpg" alt="Health 2" /></li>
+            <li><img src="/scroll-pill/health-3.jpg" alt="Health 3" /></li>
+          </ul>
+          <div class="fixed-text">
+            <h1>The Best Medical Service</h1>
+            <h2>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              pulvinar pretium ultricies.
+            </h2>
+            <button class="cta">Learn More</button>
+          </div>
         </div>
       </div>
     </div>
